@@ -1,0 +1,27 @@
+<h1>"See Full List" page.<br></h1>
+
+<h2>All the todos from the database are listed below, using Ruby iteration:</h2>
+
+<p>
+  <%= link_to "Create a Todo", new_todo_path %>
+</p>
+
+<table border="4" padding="3">
+
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  
+  <% @todos.each do |todo| %>
+  
+  <tr>
+    <td><%= todo.name %></td>
+    <td><%= todo.description %></td>
+    <td><%= link_to "Edit", edit_todo_path(todo) %></td>
+    <td><%= link_to "Show", todo_path(todo) %></td>
+  </tr>
+  
+  <% end %>>
+
+</table>

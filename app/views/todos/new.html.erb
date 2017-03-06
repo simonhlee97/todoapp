@@ -1,4 +1,4 @@
-<h1>Create a new Todo, this time in the browser-UI, not the rails Console.</h1>
+<h1>Creating a new todo entry and adding it to the database, this time in the browser-UI, not via the Rails Console.</h1>
 
 <% if @todo.errors.any? %>
   <h2>The following errors prevented the todo from being saved</h2>
@@ -24,3 +24,5 @@
   </p>
   
 <% end %>
+
+<%= link_to "Go back to the See Full List page", todos_path %>
